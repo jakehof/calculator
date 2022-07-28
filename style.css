@@ -1,3 +1,10 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 body {
     display: flex;
     justify-content: center;
@@ -26,12 +33,15 @@ body {
     width: 200px;
 }
 
-.buttons button {
-    width: auto;
+button {
+    width: 40px;
+    height: auto;
 }
 
 .numbers{
+    
     width: 66.66%;
+    justify-content: space-between;
 }
 
 .operators{

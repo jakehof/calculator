@@ -31,12 +31,28 @@ const operate = function(operator, num1, num1) {
     }
 }
 
+const screen = document.querySelector('.screen');
+
+const showNumber = function(e){
+
+   let num = e.target.innerHTML;
+
+   if(num === 'clear') {
+    screen.innerHTML = '';
+   } else{
+   screen.innerHTML += num;
+   };
+};
+
 const numberGen = function () {
     for(i=1; i <= 9; i++) {
         let button = document.createElement('button');
         button.textContent = i;
         numbers.appendChild(button);
+        
     }
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => button.addEventListener('click', showNumber))
 }
 
 numberGen();
